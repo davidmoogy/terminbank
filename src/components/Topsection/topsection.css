@@ -1,0 +1,17 @@
+
+.topsection{
+    
+    width: 100%;
+    height: auto;
+    background-color: #D5E1E6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.topsection__text{
+    
+    color: #B78554;
+    font-weight: bold;
+    text-align: center;
+}
