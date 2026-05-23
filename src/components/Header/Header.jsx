@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./header.css";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [show, setShow] = useState(false);
@@ -12,32 +13,28 @@ export default function Header() {
 
       <nav className="nav-links">
         <div className="dropdown">
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              setShow(!show);
-            }}
+          <span
             className="about-link"
+            onClick={() => setShow(!show)}
           >
             ჩვნეს შესახებ
-          </a>
+          </span>
 
           {show && (
             <div className="dropdown-menu">
-              <a href="#">გალერეა</a>
-              <a href="#">ჩვენი გუნდი</a>
-              <a href="#">პარტნიორები</a>
-              <a href="#">ნეოლოგიზმები</a>
-              <a href="">ახალი ამბები</a>
+              <Link to="/gallery">გალერეა</Link>
+              <Link to="/team">ჩვენი გუნდი</Link>
+              <Link to="/partners">პარტნიორები</Link>
+              <Link to="/neologizmebi">ნეოლოგიზმები</Link>
+              <Link to="/ambebi">ახალი ამბები</Link>
             </div>
           )}
         </div>
 
-        <a href="#">ტერმინბანკი</a>
-        <a href="#">სასწავლო შემეცნებითი მასალა</a>
-        <a href="#">სამეცნიერო ბაზა</a>
-        <a href="#">კონტაქტი</a>
+        <Link to="/terminbanki">ტერმინბანკი</Link>
+        <Link to="/saswavlo">სასწავლო შემეცნებითი მასალა</Link>
+        <Link to="/samecniero">სამეცნიერო ბაზა</Link>
+        <Link to="/contact">კონტაქტი</Link>
       </nav>
 
       <div className="button-login">
