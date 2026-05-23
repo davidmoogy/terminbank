@@ -38,6 +38,11 @@ header{
 }
 
 
+.about-link{
+    color: white !important;
+    cursor: pointer;
+}
+
 .dropdown {
   position: relative;
 }

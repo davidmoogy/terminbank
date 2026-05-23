@@ -14,7 +14,7 @@ export default function Header() {
       <nav className="nav-links">
         <div className="dropdown">
           <span
-            className="about-link"
+            className="about-link text-white"
             onClick={() => setShow(!show)}
           >
             ჩვნეს შესახებ
