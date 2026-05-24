@@ -39,6 +39,19 @@ app.get("/stats", (req, res) => {
 
 });
 
+app.get("/words", (req, res) => {
+    const sql = "SELECT * FROM words";
+
+    db.query(sql, (err, result) => {
+        if (err) {
+            console.error("DB Error:", err);
+            return res.status(500).json({ message: "Database error" });
+        }
+
+        return res.status(200).json(result);
+    });
+});
+
 app.listen(5000, () => {
     console.log("Server running on port 5000");
 });
